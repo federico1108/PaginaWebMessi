@@ -1,0 +1,496 @@
+nav {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2b3035;
+  color: rgba(210, 244, 248, 0.877);
+  justify-content: space-between;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+nav div h1 {
+  margin-left: 30px;
+  font-size: 40px;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-right: 40px;
+  height: 100%;
+  align-items: center;
+}
+nav ul li:hover {
+  background-color: #343a3f;
+}
+nav ul li a {
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+}
+
+section.intro {
+  background-color: rgb(147, 230, 255);
+  display: flex;
+  height: 729px;
+  justify-content: space-between;
+}
+section.intro div.img-intro {
+  height: 729px;
+  background-color: rgba(66, 66, 66, 0.651);
+}
+section.intro div.img-intro img {
+  height: 563px;
+  width: 470.61px;
+}
+section.intro div.parrafo-1 {
+  height: 543px;
+  width: 50%;
+}
+section.intro div.parrafo-1 p {
+  margin-top: 10px;
+  margin-left: 0px;
+  font-family: "Jost", sans-serif;
+  font-size: 35px;
+  width: 100%;
+}
+section.intro div.aside-img {
+  justify-content: flex-end;
+  right: 0;
+}
+section.intro div.aside-img aside {
+  height: 729px;
+}
+section.intro div.aside-img aside img {
+  height: 100%;
+}
+
+footer {
+  height: 120px;
+  display: flex;
+  background-color: #2b3035;
+  text-align: center;
+  color: rgba(210, 244, 248, 0.877);
+  flex-direction: column;
+  justify-content: center;
+  font-size: 33px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+footer ul li {
+  margin: 8px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: rgba(210, 244, 248, 0.877);
+}
+
+body.fondo-estadio {
+  background-image: url(../imagenes/estadio-trofeos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+article.trofeos-flex section {
+  display: flex;
+  gap: 30px;
+  margin: 5%;
+  justify-content: center;
+  align-items: stretch;
+}
+article.trofeos-flex section div {
+  border: 15px solid #2b3035;
+  border-radius: 10px;
+  width: 100%;
+  background-color: #2b3035;
+}
+article.trofeos-flex section div img {
+  width: 100%;
+  height: auto;
+}
+article.trofeos-flex section div h1 {
+  color: white;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+  font-size: 35px;
+}
+article.trofeos-flex section div p {
+  margin-top: 10px;
+  font-size: 22px;
+  color: white;
+  font-family: "Jost", sans-serif;
+}
+
+section.estadisticas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.estadisticas table {
+  border: 10px solid black;
+  border-radius: 20px;
+  background-color: rgb(150, 225, 248);
+  opacity: 83%;
+  height: 100%;
+  font-family: "Jost", sans-serif;
+}
+section.estadisticas table tr {
+  border: 5px solid black;
+}
+section.estadisticas table tr.titulo-tabla {
+  font-size: 90px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+section.estadisticas table tr.tipos-goles {
+  font-size: 50px;
+}
+section.estadisticas table tr.est-partidos {
+  font-size: 75px;
+}
+
+section.trayectoria {
+  height: 729px;
+  display: flex;
+  flex-direction: row;
+}
+section.trayectoria div.imagenes-trayectoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(34, 151, 180);
+}
+section.trayectoria div.imagenes-trayectoria img {
+  width: 350px;
+  height: auto;
+  background-color: rgb(150, 225, 248);
+}
+section.trayectoria div.texto-trayectoria {
+  height: 729px;
+  opacity: 90%;
+}
+section.trayectoria div.texto-trayectoria p {
+  background-color: rgb(150, 225, 248);
+  width: 100%;
+  font-size: 140%;
+  font-family: "Jost", sans-serif;
+  height: 100%;
+  text-justify: center;
+}
+section.trayectoria div.aside-img {
+  height: 729px;
+  width: auto;
+}
+section.trayectoria div.aside-img img {
+  height: 729px;
+  width: auto;
+}
+
+section.vida-personal {
+  display: flex;
+  flex-direction: row;
+  height: 729px;
+}
+section.vida-personal div {
+  background-color: rgb(150, 225, 248);
+}
+section.vida-personal div img {
+  justify-content: flex-end;
+  height: 363px;
+  width: auto;
+}
+section.vida-personal div p {
+  margin-right: 25px;
+  text-align: justify;
+  font-size: 120%;
+  font-family: "Jost", sans-serif;
+  height: 100%;
+  text-justify: center;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: none;
+    background-color: rgb(150, 225, 248);
+    width: 100%;
+  }
+  body nav.nav-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body nav.nav-bar h1 {
+    font-size: 80%;
+  }
+  body nav.nav-bar a {
+    font-size: 50%;
+  }
+  body section.intro {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 350px;
+    grid-template-rows: 300px 429px;
+    align-items: center;
+    background-color: rgb(150, 225, 248);
+  }
+  body section.intro div.img-intro {
+    grid-area: 1/1/2/2;
+    height: -moz-max-content;
+    height: max-content;
+    margin-top: 3px;
+  }
+  body section.intro div.img-intro img {
+    height: 300px;
+    width: auto;
+  }
+  body section.intro div.parrafo-1 {
+    grid-area: 2/1/3/2;
+    margin: 0;
+    padding: 0;
+    height: 429px;
+    overflow: scroll;
+    align-self: center;
+    width: 250px;
+  }
+  body section.intro div.parrafo-1 p {
+    text-align: center;
+    font-size: 15px;
+    text-justify: distribute;
+  }
+  body section.intro div.aside-img {
+    grid-area: 1/2/3/3;
+    width: 152px;
+  }
+  body section.intro div.aside-img img {
+    width: 152px;
+    height: auto;
+  }
+  body section.estadisticas table {
+    width: -moz-max-content;
+    width: max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
+  body section.estadisticas table tr.titulo-tabla {
+    font-size: 100%;
+  }
+  body section.estadisticas table tr.est-partidos {
+    font-size: 100%;
+  }
+  body section.estadisticas table tr.tipos-goles {
+    font-size: 100%;
+  }
+  body article.trofeos-flex {
+    width: 100%;
+  }
+  body article.trofeos-flex section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  body article.trofeos-flex section div {
+    width: 50%;
+  }
+  body article.trofeos-flex section div img {
+    width: 100%;
+    height: auto;
+  }
+  body section.trayectoria {
+    width: 100%;
+  }
+  body section.trayectoria div.imagenes-trayectoria {
+    width: 0%;
+  }
+  body section.trayectoria div.imagenes-trayectoria img {
+    width: 100%;
+    height: auto;
+  }
+  body section.trayectoria div.texto-trayectoria {
+    width: 60%;
+  }
+  body section.trayectoria div.texto-trayectoria p {
+    font-size: 80%;
+  }
+  body section.trayectoria div.aside-img {
+    width: 40%;
+  }
+  body section.trayectoria div.aside-img img {
+    width: 100%;
+    height: auto;
+  }
+  body section.vida-personal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  body section.vida-personal div {
+    display: flex;
+    flex-direction: column;
+  }
+  body section.vida-personal div p {
+    font-size: 100%;
+  }
+  body section.vida-personal div img {
+    order: 3;
+    width: 100%;
+    height: auto;
+  }
+  body footer {
+    bottom: 0;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  body footer li {
+    font-size: 50%;
+  }
+  body footer a {
+    font-size: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+  body {
+    background-image: none;
+    background-color: rgb(150, 225, 248);
+    width: 100%;
+  }
+  nav.nav-bar {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  nav.nav-bar h1 {
+    font-size: 100%;
+  }
+  nav.nav-bar ul li a {
+    font-size: 100%;
+  }
+  section.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  section.intro div.img-intro {
+    width: 30%;
+  }
+  section.intro div.img-intro img.img-index {
+    width: 100%;
+    height: auto;
+  }
+  section.intro div.parrafo-1 {
+    width: 40%;
+    font-size: 12px;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+    margin: 0;
+  }
+  section.intro div.parrafo-1 p {
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+  }
+  section.intro div.aside-img {
+    width: 30%;
+  }
+  section.intro div.aside-img img {
+    width: 100%;
+    height: auto;
+  }
+  section.estadisticas table {
+    width: -moz-max-content;
+    width: max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+  }
+  section.estadisticas table tr.titulo-tabla {
+    font-size: 100%;
+  }
+  section.estadisticas table tr.est-partidos {
+    font-size: 100%;
+  }
+  section.estadisticas table tr.tipos-goles {
+    font-size: 100%;
+  }
+  article.trofeos-flex {
+    width: 100%;
+  }
+  article.trofeos-flex section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  article.trofeos-flex section div {
+    width: 50%;
+  }
+  article.trofeos-flex section div img {
+    width: 100%;
+    height: auto;
+  }
+  section.trayectoria {
+    width: 100%;
+    height: 729px;
+  }
+  section.trayectoria div.imagenes-trayectoria {
+    width: 0%;
+  }
+  section.trayectoria div.imagenes-trayectoria img {
+    width: 100%;
+    height: auto;
+  }
+  section.trayectoria div.texto-trayectoria {
+    width: 60%;
+  }
+  section.trayectoria div.texto-trayectoria p {
+    font-size: 80%;
+  }
+  section.trayectoria div.aside-img {
+    width: 40%;
+  }
+  section.trayectoria div.aside-img img {
+    width: 100%;
+    height: auto;
+  }
+  section.vida-personal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+  }
+  section.vida-personal div {
+    display: flex;
+    flex-direction: column;
+  }
+  section.vida-personal div p {
+    font-size: 100%;
+  }
+  section.vida-personal div img {
+    order: 3;
+    width: 100%;
+    height: auto;
+  }
+  footer {
+    width: 100%;
+  }
+  footer li {
+    font-size: 60%;
+  }
+  footer a {
+    font-size: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
