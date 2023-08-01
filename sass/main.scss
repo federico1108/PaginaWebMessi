@@ -2,7 +2,7 @@
 
 body {
     background: rgb(33,188,190);
-    background: linear-gradient(0deg, rgba(33,188,190,1) 41%, rgba(79,176,33,1) 70%);
+    background: linear-gradient(0deg, rgba(33,188,190,0.6979166666666667) 41%, rgba(79,176,33,0.6839110644257703) 70%);
 }
 
 nav {
@@ -14,13 +14,14 @@ nav {
     color: $color-letra;
     justify-content: space-between;
     font-family: $font-nav;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: $shadow;
 
     div {
         h1 {
             margin-left: 30px;
             font-size: 40px;
             align-items: center;
+            text-shadow: $shadow;
         }
     }
 
@@ -37,8 +38,6 @@ nav {
             display: flex;
             height: 100%;
             align-items: center;
-            justify-content: center;
-            align-self: center;
 
             &:hover {
                 background-color: #343a3f;
@@ -48,6 +47,7 @@ nav {
             }
 
             a {
+                text-shadow: $shadow;
                 font-size: 35px;
                 color: white;
                 text-decoration: none;
@@ -86,7 +86,6 @@ section.intro {
             font-family: 'Jost', sans-serif;
             font-size: 35px;
             width: 95%;
-
         }
     }
 
@@ -121,10 +120,12 @@ footer {
     ul {
         li {
             margin: 8px;
+            text-shadow: $shadow;
 
             a {
                 text-decoration: none;
                 color: $color-letra;
+                text-shadow: $shadow;
             }
         }
     }
@@ -169,8 +170,11 @@ article.trofeos-flex {
 
 section.estadisticas {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+
 
     table {
         border: 10px solid black;
@@ -179,6 +183,8 @@ section.estadisticas {
         opacity: 83%;
         height: 100%;
         font-family: 'Jost', sans-serif;
+        margin-top: 40px;
+        margin-bottom: 40px;
 
         tr {
             border: 5px solid black;
@@ -187,17 +193,42 @@ section.estadisticas {
         tr.titulo-tabla {
             font-size: 90px;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            text-shadow: $shadow;
+
         }
 
         tr.tipos-goles {
             font-size: 50px;
+            text-shadow: $shadow;
         }
 
         tr.est-partidos {
             font-size: 75px;
+            text-shadow: $shadow;
+        }
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 20px;
+        h2 {
+            font-family: 'Jost', sans-serif;
+            text-align: center;
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        iframe {
+            width: 800px;
+            height: 480px;
+            align-self: center;
         }
     }
 }
+
+
+    
+
 
 section.trayectoria {
     height: 729px;
@@ -225,8 +256,8 @@ section.trayectoria {
 
         p {
             padding: 20px;
-            width: 80%;
-            font-size: 28px;
+            width: 95%;
+            font-size: 31px;
             font-family: 'Jost', sans-serif;
             height: 100%;
             text-justify: center;
@@ -247,21 +278,22 @@ section.trayectoria {
 section.vida-personal {
     display: flex;
     flex-direction: row;
-    height: 729px;
+    height: auto;
 
     div {
         img {
             justify-content: flex-end;
-            height: 363px;
-            width: auto;
+            height: auto;
+            width: 600px;
         }
 
         p {
-            margin-right: 25px;
+            padding: 28px;
             text-align: justify;
-            font-size: 29px;
+            font-size: 30px;
             font-family: 'Jost', sans-serif;
             height: 100%;
+            width: auto;
             text-justify: center;
         }
     }

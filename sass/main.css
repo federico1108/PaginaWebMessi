@@ -1,6 +1,6 @@
 body {
   background: rgb(33, 188, 190);
-  background: linear-gradient(0deg, rgb(33, 188, 190) 41%, rgb(79, 176, 33) 70%);
+  background: linear-gradient(0deg, rgba(33, 188, 190, 0.6979166667) 41%, rgba(79, 176, 33, 0.6839110644) 70%);
 }
 
 nav {
@@ -12,12 +12,13 @@ nav {
   color: rgba(210, 244, 248, 0.877);
   justify-content: space-between;
   font-family: "Plus Jakarta Sans", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 6px black;
 }
 nav div h1 {
   margin-left: 30px;
   font-size: 40px;
   align-items: center;
+  text-shadow: 3px 3px 6px black;
 }
 nav ul {
   list-style: none;
@@ -32,8 +33,6 @@ nav ul li {
   display: flex;
   height: 100%;
   align-items: center;
-  justify-content: center;
-  align-self: center;
 }
 nav ul li:hover {
   background-color: #343a3f;
@@ -41,6 +40,7 @@ nav ul li:hover {
   align-self: center;
 }
 nav ul a {
+  text-shadow: 3px 3px 6px black;
   font-size: 35px;
   color: white;
   text-decoration: none;
@@ -102,10 +102,12 @@ footer {
 }
 footer ul li {
   margin: 8px;
+  text-shadow: 3px 3px 6px black;
 }
 footer ul li a {
   text-decoration: none;
   color: rgba(210, 244, 248, 0.877);
+  text-shadow: 3px 3px 6px black;
 }
 
 article.trofeos-flex section {
@@ -140,16 +142,20 @@ article.trofeos-flex section div p {
 
 section.estadisticas {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 section.estadisticas table {
   border: 10px solid black;
   border-radius: 20px;
-  background-color: rgb(150, 225, 248);
+  background-color: rgba(48, 248, 255, 0.863);
   opacity: 83%;
   height: 100%;
   font-family: "Jost", sans-serif;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 section.estadisticas table tr {
   border: 5px solid black;
@@ -157,12 +163,32 @@ section.estadisticas table tr {
 section.estadisticas table tr.titulo-tabla {
   font-size: 90px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  text-shadow: 3px 3px 6px black;
 }
 section.estadisticas table tr.tipos-goles {
   font-size: 50px;
+  text-shadow: 3px 3px 6px black;
 }
 section.estadisticas table tr.est-partidos {
   font-size: 75px;
+  text-shadow: 3px 3px 6px black;
+}
+section.estadisticas div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+section.estadisticas div h2 {
+  font-family: "Jost", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: underline;
+}
+section.estadisticas div iframe {
+  width: 800px;
+  height: 480px;
+  align-self: center;
 }
 
 section.trayectoria {
@@ -179,7 +205,7 @@ section.trayectoria div.imagenes-trayectoria {
 section.trayectoria div.imagenes-trayectoria img {
   width: 385px;
   height: auto;
-  background-color: rgb(150, 225, 248);
+  background-color: rgba(48, 248, 255, 0.863);
 }
 section.trayectoria div.texto-trayectoria {
   height: 729px;
@@ -189,8 +215,8 @@ section.trayectoria div.texto-trayectoria {
 }
 section.trayectoria div.texto-trayectoria p {
   padding: 20px;
-  width: 80%;
-  font-size: 28px;
+  width: 95%;
+  font-size: 31px;
   font-family: "Jost", sans-serif;
   height: 100%;
   text-justify: center;
@@ -207,26 +233,27 @@ section.trayectoria div.aside-img img {
 section.vida-personal {
   display: flex;
   flex-direction: row;
-  height: 729px;
+  height: auto;
 }
 section.vida-personal div img {
   justify-content: flex-end;
-  height: 363px;
-  width: auto;
+  height: auto;
+  width: 600px;
 }
 section.vida-personal div p {
-  margin-right: 25px;
+  padding: 28px;
   text-align: justify;
-  font-size: 29px;
+  font-size: 30px;
   font-family: "Jost", sans-serif;
   height: 100%;
+  width: auto;
   text-justify: center;
 }
 
 @media (max-width: 576px) {
   body {
     background-image: none;
-    background-color: rgb(150, 225, 248);
+    background-color: rgba(48, 248, 255, 0.863);
     width: 100%;
   }
   body nav.nav-bar {
@@ -249,7 +276,7 @@ section.vida-personal div p {
     grid-template-columns: 250px 350px;
     grid-template-rows: 300px 429px;
     align-items: center;
-    background-color: rgb(150, 225, 248);
+    background-color: rgba(48, 248, 255, 0.863);
   }
   body section.intro div.img-intro {
     grid-area: 1/1/2/2;
@@ -372,7 +399,7 @@ section.vida-personal div p {
 @media (min-width: 576px) and (max-width: 1023px) {
   body {
     background-image: none;
-    background-color: rgb(150, 225, 248);
+    background-color: rgba(48, 248, 255, 0.863);
     width: 100%;
   }
   nav.nav-bar {
