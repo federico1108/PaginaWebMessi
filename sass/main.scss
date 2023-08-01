@@ -1,15 +1,21 @@
-
 @import "variables";
 
+body {
+    background: rgb(33,188,190);
+    background: linear-gradient(0deg, rgba(33,188,190,1) 41%, rgba(79,176,33,1) 70%);
+}
+
 nav {
-    height: 80px;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background-color: $color-main;
     color: $color-letra;
     justify-content: space-between;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: $font-nav;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
     div {
         h1 {
             margin-left: 30px;
@@ -17,91 +23,114 @@ nav {
             align-items: center;
         }
     }
-    ul {   
+
+    ul {
         list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 20px;
         margin-right: 40px;
         height: 100%;
         align-items: center;
-        li {   
+        gap: 20px;
+
+        li {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+
             &:hover {
                 background-color: #343a3f;
+                height: 100%;
+                align-self: center;
+                }
             }
+
             a {
-            font-size: 35px;
-            color: white;
-            text-decoration: none;
+                font-size: 35px;
+                color: white;
+                text-decoration: none;
             }
         }
     }
-}
+
+
 section.intro {
-    background-color: rgb(147, 230, 255);
     display: flex;
     height: 729px;
     justify-content: space-between;
+
     div.img-intro {
         height: 729px;
-        background-color: rgba(66, 66, 66, 0.651);
+        background-color: rgb(87, 155, 101);
+
         img {
-            height:563px;
+            height: 563px;
             width: 470.61px;
         }
+        h3 {
+            font-family: 'Jost', sans-serif;
+            font-size: 25px;
+            width: 99%;
+            padding: 3px;
         }
+    }
+
     div.parrafo-1 {
         height: 543px;
-        width: 50%;  
+        width: auto;
+
         p {
-            margin-top: 10px;
-            margin-left: 0px;
+            padding: 20px;
             font-family: 'Jost', sans-serif;
             font-size: 35px;
-            width: 100%;
+            width: 95%;
 
         }
     }
+
     div.aside-img {
         justify-content: flex-end;
         right: 0;
+
         aside {
             height: 729px;
+
             img {
                 height: 100%;
             }
         }
     }
 }
+
 footer {
     height: 120px;
     display: flex;
-    background-color: $color-main; 
+    background-color: $color-main;
     text-align: center;
     color: $color-letra;
     flex-direction: column;
     justify-content: center;
     font-size: 33px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    position:static;
+    position: static;
     bottom: 0;
     width: 100%;
 
     ul {
         li {
-            margin:8px;
+            margin: 8px;
+
             a {
                 text-decoration: none;
                 color: $color-letra;
             }
         }
-    }    
+    }
 }
-body.fondo-estadio {
-    background-image: url(../imagenes/estadio-trofeos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
+
 article.trofeos-flex {
     section {
         display: flex;
@@ -109,21 +138,25 @@ article.trofeos-flex {
         margin: 5%;
         justify-content: center;
         align-items: stretch;
+
         div {
             border: 15px solid $color-main;
             border-radius: 10px;
             width: 100%;
             background-color: $color-main;
+
             img {
                 width: 100%;
                 height: auto;
             }
-            h1 {
+
+            h2 {
                 color: white;
                 font-family: 'Jost', sans-serif;
                 text-align: center;
                 font-size: 35px;
             }
+
             p {
                 margin-top: 10px;
                 font-size: 22px;
@@ -133,270 +166,328 @@ article.trofeos-flex {
         }
     }
 }
+
 section.estadisticas {
     display: flex;
     align-items: center;
     justify-content: center;
-    table{
+
+    table {
         border: 10px solid black;
         border-radius: 20px;
         background-color: $color-fondo;
         opacity: 83%;
         height: 100%;
         font-family: 'Jost', sans-serif;
+
         tr {
             border: 5px solid black;
         }
+
         tr.titulo-tabla {
             font-size: 90px;
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
+
         tr.tipos-goles {
             font-size: 50px;
         }
+
         tr.est-partidos {
             font-size: 75px;
         }
     }
 }
+
 section.trayectoria {
     height: 729px;
     display: flex;
     flex-direction: row;
+
     div.imagenes-trayectoria {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         background-color: rgb(34, 151, 180);
+
         img {
-            width: 350px;
+            width: 385px;
             height: auto;
             background-color: $color-fondo;
         }
     }
+
     div.texto-trayectoria {
         height: 729px;
         opacity: 90%;
+        width: auto;
+        overflow: hidden;
+
         p {
-            background-color: $color-fondo;
-            width: 100%;
-            font-size: 140%;
+            padding: 20px;
+            width: 80%;
+            font-size: 28px;
             font-family: 'Jost', sans-serif;
             height: 100%;
             text-justify: center;
         }
     }
+
     div.aside-img {
         height: 729px;
         width: auto;
-            img {
-                height: 729px;
-                width: auto;
-            }
+
+        img {
+            height: 729px;
+            width: auto;
+        }
     }
 }
+
 section.vida-personal {
     display: flex;
     flex-direction: row;
     height: 729px;
+
     div {
-        background-color: $color-fondo;
         img {
             justify-content: flex-end;
             height: 363px;
             width: auto;
         }
+
         p {
             margin-right: 25px;
-            text-align:justify;
-            font-size: 120%;
+            text-align: justify;
+            font-size: 29px;
             font-family: 'Jost', sans-serif;
             height: 100%;
             text-justify: center;
         }
     }
 }
+
 @media (max-width: $celular) {
     body {
         background-image: none;
         background-color: $color-fondo;
         width: 100%;
-    nav.nav-bar {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        h1{
-            font-size: 80%;
-        }
-        a {
-            font-size: 50%;
-        }
-    }
-    section.intro {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 250px 350px;
-        grid-template-rows: 300px 429px;
-        align-items: center;
-        background-color: $color-fondo;
-        div.img-intro {
-            grid-area: 1/1/2/2;
-            height: max-content;
-            margin-top: 3px;
-            img {
-                height: 300px;
-                width: auto;
-            }
-        }
-        div.parrafo-1 { 
-            grid-area: 2/1/3/2;
-            margin: 0;
-            padding: 0;
-            height: 429px;
-            overflow: scroll;
-            align-self: center;
-            width: 250px;
-            p{
-            text-align: center;
-            font-size: 15px;
-            text-justify:distribute;
-            }
-        }
-        div.aside-img {
-            grid-area: 1/2/3/3;
-            width: 152px;
-            img {
-                width: 152px;
-                height: auto;
-            }
-        }
-    }
-    section.estadisticas {
-        table {
-            width: max-content;
-            max-height: max-content;
-            tr.titulo-tabla {
-                font-size: 100%;
-            }
-            tr.est-partidos {
-                font-size: 100%;
-            }
-            tr.tipos-goles {
-                font-size: 100%;
-            }
-        }
-    }
-    article.trofeos-flex {
-        width: 100%;
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+        nav.nav-bar {
             width: 100%;
-            div {
-                width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            h1 {
+                font-size: 80%;
+            }
+
+            a {
+                font-size: 50%;
+            }
+        }
+
+        section.intro {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 250px 350px;
+            grid-template-rows: 300px 429px;
+            align-items: center;
+            background-color: $color-fondo;
+
+            div.img-intro {
+                grid-area: 1/1/2/2;
+                height: max-content;
+                margin-top: 3px;
+
+                img {
+                    height: 300px;
+                    width: auto;
+                }
+            }
+
+            div.parrafo-1 {
+                grid-area: 2/1/3/2;
+                margin: 0;
+                padding: 0;
+                height: 429px;
+                overflow: scroll;
+                align-self: center;
+                width: 250px;
+
+                p {
+                    text-align: center;
+                    font-size: 15px;
+                    text-justify: distribute;
+                }
+            }
+
+            div.aside-img {
+                grid-area: 1/2/3/3;
+                width: 152px;
+
+                img {
+                    width: 152px;
+                    height: auto;
+                }
+            }
+        }
+
+        section.estadisticas {
+            table {
+                width: max-content;
+                max-height: max-content;
+
+                tr.titulo-tabla {
+                    font-size: 100%;
+                }
+
+                tr.est-partidos {
+                    font-size: 100%;
+                }
+
+                tr.tipos-goles {
+                    font-size: 100%;
+                }
+            }
+        }
+
+        article.trofeos-flex {
+            width: 100%;
+
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                div {
+                    width: 50%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        section.trayectoria {
+            width: 100%;
+
+            div.imagenes-trayectoria {
+                width: 0%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            div.texto-trayectoria {
+                width: 60%;
+
+                p {
+                    font-size: 80%;
+                }
+            }
+
+            div.aside-img {
+                width: 40%;
+
                 img {
                     width: 100%;
                     height: auto;
                 }
             }
         }
-    }
-    section.trayectoria {
-        width: 100%;
-        div.imagenes-trayectoria {
-            width: 0%;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-        div.texto-trayectoria {
-            width: 60%;
-            p {
-                font-size: 80%;
-            }
-        }
-        div.aside-img {
-            width: 40%;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    }
-    section.vida-personal {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        overflow: scroll;
-        div {
+
+        section.vida-personal {
+            width: 100%;
             display: flex;
             flex-direction: column;
-            p {
+            overflow: scroll;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    font-size: 100%;
+                }
+
+                img {
+                    order: 3;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        footer {
+            bottom: 0;
+            position: static;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            li {
+                font-size: 50%;
+            }
+
+            a {
                 font-size: 100%;
             }
-            img {
-                order: 3;
-                width: 100%;
-                height: auto;
-            }
         }
-    }
-    footer {
-        bottom: 0;
-        position: static;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        li {
-            font-size: 50%;
-        }
-        a {
-            font-size: 100%;
-        }
-    }
 
+    }
 }
-}
+
 @media (min-width: $celular) and (max-width: $tablet) {
     body {
         background-image: none;
         background-color: $color-fondo;
         width: 100%;
     }
+
     nav.nav-bar {
         width: 100%;
         height: max-content;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;  
-            h1 {
-                font-size: 100%;
-            }
-            ul {
-                li {
-                    a {
-                        font-size: 100%;
-                    }
+        flex-wrap: wrap;
+
+        h1 {
+            font-size: 100%;
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 100%;
                 }
             }
+        }
     }
+
     section.intro {
         width: 100%;
         display: flex;
         flex-direction: row;
-        gap:10px;
+        gap: 10px;
+
         div.img-intro {
             width: 30%;
+
             img.img-index {
                 width: 100%;
                 height: auto;
             }
         }
+
         div.parrafo-1 {
             width: 40%;
             font-size: 12px;
@@ -405,15 +496,17 @@ section.vida-personal {
             justify-content: center;
             margin: 0;
 
-            p {       
+            p {
                 height: 100%;
                 width: 100%;
-                
+
                 font-size: 12px;
             }
         }
+
         div.aside-img {
             width: 30%;
+
             img {
                 width: 100%;
                 height: auto;
@@ -421,30 +514,38 @@ section.vida-personal {
 
         }
     }
+
     section.estadisticas {
         table {
             width: max-content;
             max-height: max-content;
+
             tr.titulo-tabla {
                 font-size: 100%;
             }
+
             tr.est-partidos {
                 font-size: 100%;
             }
+
             tr.tipos-goles {
                 font-size: 100%;
             }
         }
     }
+
     article.trofeos-flex {
         width: 100%;
+
         section {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
+
             div {
                 width: 50%;
+
                 img {
                     width: 100%;
                     height: auto;
@@ -452,42 +553,53 @@ section.vida-personal {
             }
         }
     }
+
     section.trayectoria {
         width: 100%;
         height: 729px;
+
         div.imagenes-trayectoria {
             width: 0%;
+
             img {
                 width: 100%;
                 height: auto;
             }
         }
+
         div.texto-trayectoria {
             width: 60%;
+
             p {
                 font-size: 80%;
             }
         }
+
         div.aside-img {
             width: 40%;
+
             img {
                 width: 100%;
                 height: auto;
             }
         }
     }
+
     section.vida-personal {
         height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
-        overflow:scroll ;
+        overflow: scroll;
+
         div {
             display: flex;
             flex-direction: column;
+
             p {
                 font-size: 100%;
             }
+
             img {
                 order: 3;
                 width: 100%;
@@ -495,11 +607,14 @@ section.vida-personal {
             }
         }
     }
+
     footer {
         width: 100%;
+
         li {
             font-size: 60%;
         }
+
         a {
             font-size: 100%;
         }
