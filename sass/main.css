@@ -214,6 +214,7 @@ section.trayectoria div.texto-trayectoria {
   overflow: hidden;
 }
 section.trayectoria div.texto-trayectoria p {
+  overflow: scroll;
   padding: 20px;
   width: 95%;
   font-size: 31px;
@@ -252,78 +253,103 @@ section.vida-personal div p {
 
 @media (max-width: 576px) {
   body {
-    background-image: none;
-    background-color: rgba(48, 248, 255, 0.863);
+    background: linear-gradient(0deg, rgba(33, 188, 190, 0.6979166667) 41%, rgba(79, 176, 33, 0.6839110644) 70%);
+  }
+  body footer {
+    bottom: 0;
+    position: static;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+  }
+  body footer li {
+    font-size: 14px;
+  }
+  body footer a {
+    font-size: 14px;
   }
   body nav.nav-bar {
     width: 100%;
-    height: 100%;
+    height: 70px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
   }
   body nav.nav-bar h1 {
     font-size: 80%;
   }
-  body nav.nav-bar a {
-    font-size: 50%;
+  body nav.nav-bar ul {
+    display: flex;
+    gap: 4px;
+  }
+  body nav.nav-bar ul li a {
+    font-size: 9px;
   }
   body section.intro {
     width: 100%;
-    display: grid;
-    grid-template-columns: 250px 350px;
-    grid-template-rows: 300px 429px;
-    align-items: center;
-    background-color: rgba(48, 248, 255, 0.863);
+    height: 729px;
+    display: flex;
+    flex-direction: column;
   }
   body section.intro div.img-intro {
-    grid-area: 1/1/2/2;
-    height: -moz-max-content;
-    height: max-content;
+    width: auto;
     margin-top: 3px;
+    display: flex;
+    flex-direction: row;
   }
   body section.intro div.img-intro img {
     height: 300px;
     width: auto;
   }
+  body section.intro div.img-intro h3 {
+    font-size: 12px;
+  }
   body section.intro div.parrafo-1 {
-    grid-area: 2/1/3/2;
-    margin: 0;
-    padding: 0;
-    height: 429px;
-    overflow: scroll;
-    align-self: center;
-    width: 250px;
+    height: 200px;
+    width: auto;
   }
   body section.intro div.parrafo-1 p {
-    text-align: center;
+    padding: 3px;
     font-size: 15px;
-    text-justify: distribute;
   }
   body section.intro div.aside-img {
-    grid-area: 1/2/3/3;
-    width: 152px;
+    height: 200px;
   }
-  body section.intro div.aside-img img {
-    width: 152px;
+  body section.intro div.aside-img aside {
+    height: 200px;
+  }
+  body section.intro div.aside-img aside img {
+    width: auto;
+    height: 200px;
+  }
+  body section.estadisticas {
+    display: flex;
+    flex-direction: column;
+  }
+  body section.estadisticas div h2 {
+    font-size: 17px;
+  }
+  body section.estadisticas div iframe {
+    width: 270px;
     height: auto;
   }
   body section.estadisticas table {
-    width: -moz-max-content;
-    width: max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
+    width: 300px;
+    border: 2px solid black;
+  }
+  body section.estadisticas table tr th {
+    width: 100%;
   }
   body section.estadisticas table tr.titulo-tabla {
-    font-size: 100%;
+    font-size: 22px;
   }
   body section.estadisticas table tr.est-partidos {
-    font-size: 100%;
+    font-size: 20px;
   }
   body section.estadisticas table tr.tipos-goles {
-    font-size: 100%;
+    font-size: 18px;
   }
   body article.trofeos-flex {
     width: 100%;
@@ -334,6 +360,12 @@ section.vida-personal div p {
     align-items: center;
     width: 100%;
   }
+  body article.trofeos-flex section h2 {
+    font-size: 22px;
+  }
+  body article.trofeos-flex section p {
+    font-size: 18px;
+  }
   body article.trofeos-flex section div {
     width: 50%;
   }
@@ -343,22 +375,29 @@ section.vida-personal div p {
   }
   body section.trayectoria {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   body section.trayectoria div.imagenes-trayectoria {
-    width: 0%;
+    width: 23vh;
+    display: flex;
+    flex-direction: row;
   }
   body section.trayectoria div.imagenes-trayectoria img {
     width: 100%;
     height: auto;
   }
   body section.trayectoria div.texto-trayectoria {
-    width: 60%;
+    width: 100%;
+    align-self: flex-start;
   }
   body section.trayectoria div.texto-trayectoria p {
     font-size: 80%;
   }
   body section.trayectoria div.aside-img {
-    width: 40%;
+    width: 0;
+    height: 0;
   }
   body section.trayectoria div.aside-img img {
     width: 100%;
@@ -375,42 +414,28 @@ section.vida-personal div p {
     flex-direction: column;
   }
   body section.vida-personal div p {
-    font-size: 100%;
+    font-size: 14px;
   }
   body section.vida-personal div img {
     order: 3;
     width: 100%;
     height: auto;
   }
-  body footer {
-    bottom: 0;
-    position: static;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  body footer li {
-    font-size: 50%;
-  }
-  body footer a {
-    font-size: 100%;
-  }
 }
-@media (min-width: 576px) and (max-width: 1023px) {
+@media (min-width: 576px) and (max-width: 1024px) {
   body {
-    background-image: none;
-    background-color: rgba(48, 248, 255, 0.863);
-    width: 100%;
+    background: linear-gradient(0deg, rgba(33, 188, 190, 0.6979166667) 41%, rgba(79, 176, 33, 0.6839110644) 70%);
   }
   nav.nav-bar {
     width: 100%;
-    height: -moz-max-content;
-    height: max-content;
+    height: 100px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
-  nav.nav-bar h1 {
+  nav.nav-bar div h1 {
     font-size: 100%;
   }
   nav.nav-bar ul li a {
@@ -425,22 +450,27 @@ section.vida-personal div p {
   section.intro div.img-intro {
     width: 30%;
   }
+  section.intro div.img-intro h3 {
+    font-size: 17px;
+  }
   section.intro div.img-intro img.img-index {
     width: 100%;
     height: auto;
   }
   section.intro div.parrafo-1 {
+    padding-top: 20px;
     width: 40%;
-    font-size: 12px;
     height: 100%;
     align-self: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 0;
   }
   section.intro div.parrafo-1 p {
     height: 100%;
-    width: 100%;
-    font-size: 12px;
+    width: 80%;
+    font-size: 20px;
   }
   section.intro div.aside-img {
     width: 30%;
@@ -449,20 +479,33 @@ section.vida-personal div p {
     width: 100%;
     height: auto;
   }
+  section.estadisticas {
+    margin: 10px;
+    height: 616px;
+  }
+  section.estadisticas div h2 {
+    font-size: 22px;
+  }
+  section.estadisticas div iframe {
+    height: 300px;
+    width: 480px;
+  }
   section.estadisticas table {
-    width: -moz-max-content;
-    width: max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
+    width: 300px;
+    height: 400px;
+  }
+  section.estadisticas table tr th {
+    width: 100%;
+    font-size: 24px;
   }
   section.estadisticas table tr.titulo-tabla {
     font-size: 100%;
   }
   section.estadisticas table tr.est-partidos {
-    font-size: 100%;
+    font-size: 22px;
   }
   section.estadisticas table tr.tipos-goles {
-    font-size: 100%;
+    font-size: 19px;
   }
   article.trofeos-flex {
     width: 100%;
@@ -471,7 +514,7 @@ section.vida-personal div p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
   }
   article.trofeos-flex section div {
     width: 50%;
@@ -482,10 +525,10 @@ section.vida-personal div p {
   }
   section.trayectoria {
     width: 100%;
-    height: 729px;
+    height: 616px;
   }
   section.trayectoria div.imagenes-trayectoria {
-    width: 0%;
+    width: 40%;
   }
   section.trayectoria div.imagenes-trayectoria img {
     width: 100%;
@@ -493,9 +536,10 @@ section.vida-personal div p {
   }
   section.trayectoria div.texto-trayectoria {
     width: 60%;
+    padding: 7px;
   }
   section.trayectoria div.texto-trayectoria p {
-    font-size: 80%;
+    font-size: 15px;
   }
   section.trayectoria div.aside-img {
     width: 40%;
